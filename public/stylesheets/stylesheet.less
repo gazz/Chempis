@@ -1,0 +1,59 @@
+
+.outline (@col: red) {
+/*  border: 1px solid @col; */
+}
+
+body {
+  
+  background: #D5D5D5;
+  
+  font-family: helvetica;
+  
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  #container {
+    /* splash panel */
+    #splash_panel {
+      margin: auto;
+      position: relative;
+      top: 50px;
+      width: 600px;
+      
+      h1 {
+        text-align: right;
+        margin: 240px 0 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: green;
+      }
+      
+      #squash-tiems {
+        float : left;
+        width: 295px;
+        height: 250px;
+        background: url("/images/squash_court.png");
+        background-repeat:no-repeat;
+        background-position: center;
+      }
+      
+      #balls-of-steel {
+        float: right;
+        width: 295px;
+        height: 250px;
+        background: url("/images/tarmac.jpeg");
+        background-repeat:no-repeat;
+        background-position: center;
+      }
+      
+      
+      .outline
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  laptime: 1
+  date: 2011-04-19 17:14:24
+  user_id: 1
+
+two:
+  laptime: 1
+  date: 2011-04-19 17:14:24
+  user_id: 1

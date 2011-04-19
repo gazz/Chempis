@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  player1_id: 1
+  player2_id: 1
+  date: 2011-04-19 17:28:52
+  player1_points: 1
+  player2_points: 1
+
+two:
+  player1_id: 1
+  player2_id: 1
+  date: 2011-04-19 17:28:52
+  player1_points: 1
+  player2_points: 1
