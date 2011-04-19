@@ -1,4 +1,18 @@
 Gonka::Application.routes.draw do
+  
+  get "games/show"
+
+  match '/squash', :to => 'games#show'
+  match '/karts', :to => 'laptimes#show'
+
+  get "pages/index"
+
+  resource :games
+  resource :laptimes
+
+
+  root :to => 'pages#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
