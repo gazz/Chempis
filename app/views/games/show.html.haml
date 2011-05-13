@@ -1,0 +1,12 @@
+%h1 Game
+
+%div Player1
+%div= @game.player1_id
+%div Player2
+%div= @game.player2_id
+%div Points
+%div #{@game.player1_points}/#{@game.player2_points}
+
+=link_to 'back',:back
+
+

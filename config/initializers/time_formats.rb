@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:datecontrol_timestamp] = "%m/%d/%Y %H:%M"

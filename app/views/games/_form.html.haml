@@ -1,0 +1,10 @@
+= semantic_form_for [@game.tournament, @game] do |form|
+  = form.input :player1_id, :as => :select, :collection => User.all, :label => "Sportists #1"
+  = form.input :player2_id, :as => :select, :collection => User.all, :label => "Sportists #2"
+  = form.input :player1_points, :label => "Pirmā sportista punkti"
+  = form.input :player2_points, :label => "Otrā sportista punkti"
+  .actions
+    = form.buttons do
+      =form.commit_button :label => 'Saglabāt'
+    
+.clear

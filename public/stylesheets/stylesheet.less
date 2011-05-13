@@ -1,20 +1,49 @@
 
+/* theme colors */
+@dark_color: #2E3D2C;
+@base_color: #57693C;
+@light_color: #999855;
+@bright_color: #D8DB86;
+@neutral_color: #78706E;
+@neutral_color: #ffffff;
+@highlight_color: #dfe0bf;
+
+@content_width: 1000px;
+@header_height: 60px;
+@right_content_width: 180px;
+@content_paddings: 50px;
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
 .outline (@col: red) {
 /*  border: 1px solid @col; */
 }
 
+
 body {
   
-  background: #D5D5D5;
+  margin: 0px;
   
-  font-family: helvetica;
+  background: @neutral_color;
+  
+  /*font-family: helvetica;*/
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode',sans-serif;
+  
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
   
   a {
     text-decoration: none;
     color: #000000;
   }
   
-  #container {
+  #splash_container {
     /* splash panel */
     #splash_panel {
       margin: auto;
@@ -27,7 +56,7 @@ body {
         margin: 240px 0 0;
         font-size: 20px;
         font-weight: bold;
-        color: green;
+        color: @bright_color;
       }
       
       #squash-tiems {
@@ -52,8 +81,421 @@ body {
       .outline
     }
   }
+  
+  background-color: @base_color;
+  
+  #tournaments {
+    
+    #top_line {
+      height: @header_height;
+      background-color: @base_color;
+      text-shadow: 2px 1px @dark_color;
+      
+      div#header {
+        
+        a {
+          color: @bright_color;
+        }
+        
+        
+        width: @content_width;
+        height: @header_height;
+        background-color: @base_color;
+        margin: auto;
+        color: @bright_color;
+        
+        div#header_title {
+          float: left;
+          h1 {
+            padding: 15px 0 0 15px;
+            font-size: 32px;
+          }
+        }
+        
+        div#header_links {
+          float: right;
+          padding: 30px 10px 0 0;
+          
+          a {
+            font-size: 20px;
+            color: @bright_color;
+            font-weight: bold;           
+          }
+          
+        }
+        
+      }
+    }
+    
+    #contents {
+      width: @content_width;
+      margin: auto;
+      background-color: @bright_color;
+
+      a {
+        color: @dark_color;
+      }
+      
+      .flash {
+        float: left; 
+        width: @content_width - @right_content_width - @content_paddings - 30;
+        background-color: @highlight_color;
+        margin: 15px;
+        padding: 10px;
+        
+        .rounded-corners(10px);
+      }
+      
+      
+      .label {
+        float: left;
+        width: 120px;
+        text-align: right;
+        padding-right: 10px;
+        font-size: .9em;
+        font-weight: bold;
+      }
+
+      .value {
+        font-size: .9em;
+      }
+
+      #contents_left {
+        float: left;
+        width: @content_width - @right_content_width - @content_paddings;
+        color: @dark_color;
+        
+        ul {
+          margin: 0px;
+          padding: 15px 0 0 20px;
+          list-style: none;
+          li.dashboard_item {
+            .title {
+              float: left;
+              h2 {
+                padding: 0px;
+                margin: 15px 0 5px 10px;
+              }
+            }
+            .actions {
+              padding: 20px 5px 0;
+              float: right;
+              a {
+                font-size: 13px;
+                font-weight: bold;
+                color: @highlight_color;
+                background-color: @dark_color;
+                padding: 3px 20px;
+                
+                .rounded-corners(10px);
+              }
+            }
+            .dashboard-item-content {
+              clear: both;
+              background-color: @highlight_color;
+              padding: 10px;
+              
+              .content-table {
+                width: 100%;
+                text-align: left;
+                
+                th {
+                  font-size: 12px;
+                }
+                  
+                td {
+                  font-size: 13px;
+                }
+                
+                &.tournaments {
+
+                  
+                  .col-datetime {
+                    width: 100px;
+                  }
+                  .col-name {
+                    width: 150px;
+                    font-weight: bold;
+                  }
+                  .col-participants {
+                    width: 200px;
+                  }
+                  .col-availability {
+                    width: 50px;
+                  }
+                  .col-location {
+                    width: 100px;
+                  }
+                }
+                
+                &.games {
+                  .col-opponent {
+                    width: 100px;
+                  }
+                  .col-name { 
+                    width: 350px;
+                    font-weight: bold;
+                  }
+                  .col-date {
+                    
+                  }
+                  .col-points {
+                    
+                  }
+                }
+                
+              }
+              
+              
+              .rounded-corners(10px);
+            }
+          }
+        }
+
+        
+        #profile {
+          padding: 0 20px;
+          h3 {
+            margin-bottom: 5px;
+          }
+          h2 {
+            font-size: 1em;
+            margin: 5px;
+          }
+          
+          .info {
+            background-color: @highlight_color;
+            padding: 15px;
+            table {
+              text-align: center;
+              th {
+                width: 100px;
+              }
+            }
+            .rounded-corners(10px);
+            
+            
+            input[type='checkbox'] {
+              width: auto;
+            }
+            
+
+          }
+        
+          &.login {
+            width: 300px;
+            margin: auto;
+            
+            input {
+              width: 100%;
+            }
+            
+          }
+        }
+        
+      }
+      
+      .field_with_errors {
+        input {
+          border: 1px solid red;
+        }
+      }
+      
+      div.actions {
+        padding: 15px 0 0 0px;
+        float: right;
+        a, input {
+          background-color: @dark_color;
+          margin: 10px;
+          padding: 5px 15px;
+          color: @highlight_color;
+          border: 0;
+
+          .rounded-corners(10px);
+        }
+        
+        input {
+          font-size: 1em;
+          margin: 0 10px 10px;
+          cursor: pointer;
+          width: auto;
+        }
+ 
+      }
+      
+      
+      #contents_right {
+        float: right;
+        width: @right_content_width;
+        padding: 10px 10px 30px;
+        margin: 30px 10px 0  0;
+        color: @dark_color;
+        text-shadow: 1px 1px @neutral_color;
+        
+        a {
+          color: @dark_color;
+        }
+        
+        background-color: @highlight_color;
+        
+        h1 {
+          text-align: right;
+          font-style:oblique
+        }
+        
+        ul {
+          list-style: none;
+          text-align: right;
+        }
+        
+        
+        h4 {
+          margin: 5px;
+        }
+
+        
+        .splitter {
+          border-bottom: 1px solid @dark_color;
+          margin: 10px 0;
+        }
+        
+        .rounded-corners(15px)
+        
+      }
+      
+      #tournament_form {
+        padding: 0 20px;
+        width: 400px;
+        margin: auto;
+        
+        .info {
+          background-color: @highlight_color;
+          padding: 15px;
+          
+          .rounded-corners(10px);
+          
+          li {
+            list-style:none;
+            
+            label {
+              width: 120px;
+              display: block;
+            }
+            
+            input {
+              width: 100%;
+            }
+
+            
+          }
+          
+        }
+      }
+      
+      #tournament {
+        margin: 20px;
+        h2 {
+          margin: 10px;
+        }
+        .item {
+          padding: 10px;
+          background-color: @highlight_color;
+          .rounded-corners(10px);
+        }
+      }
+      
+      #game_form {
+        #tournament_form
+      }
+      
+      table.games {
+        width: 100%;
+        font-size: .9em;
+        td {
+          text-align: center;
+        }
+        .col-id {
+          width: 30px;
+        }
+        .col-player {
+          width: 80px;
+        }
+        .col-points {
+          width: 80px;
+        }
+        .col-tournament {
+          font-weight: bold;
+          width: 150px;
+        }
+
+      }
+
+      .contents_bottom {
+        height: 20px;
+      }
+      .rounded-corners(10px)
+      
+      table {
+        .col-action {
+          width: 60px;
+          a {
+            font-size: 0.9em;
+            font-weight: bold;
+            background-color: @dark_color;
+            color: @highlight_color;
+            .rounded-corners(10px);
+            padding: 2px 15px;
+          }
+        }
+      }
+      
+   }
+    
+    #footer {
+      width: @content_width;
+      margin: auto;
+      background-color: @dark_color;
+      color: @bright_color;
+      height: 100px;
+      text-shadow: 1px 1px black;
+      
+      div#copyright {
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 20px;
+      }
+    }
+
+    
+    #filler {
+      background-color: @dark_color;
+      z-index: -1;
+      height: 90%;
+      position: absolute;
+      width: @content_width;
+      left: 0px;
+      right: 0px;
+      top: 10%;
+      margin: auto;
+    }
+    
+  }
+  
+            
+  fieldset.buttons {
+    margin: 0px;
+    padding: 0px;
+    border: 0 none;
+    ol {
+      padding: 0px;
+      margin: 0px;
+    }
+  }
 
   .clear {
     clear: both;
   }
+  
+
 }

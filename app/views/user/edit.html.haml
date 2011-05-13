@@ -1,0 +1,7 @@
+%h1 User profile
+
+= semantic_form_for @user, :url => profile_edit_path do |form|
+  =form.input :name
+  =form.input :email
+  = form.buttons
+  

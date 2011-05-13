@@ -1,0 +1,20 @@
+
+#tournament
+  %h2 Turnīrs
+
+  .item
+    %div.label Nosaukums:
+    %div.value= @tournament.name
+    %div.label Datums/Laiks:
+    %div.value= @tournament.datetime.nil? ? '' :@tournament.datetime.to_formatted_s(:datecontrol_timestamp)
+
+  =render 'games/list'
+
+  .actions
+    =link_to 'pievienot spēli', new_tournament_game_path(@tournament)
+
+  .clear
+  
+  =link_to 'atpakaļ', tournaments_path
+
+

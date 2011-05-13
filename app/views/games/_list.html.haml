@@ -1,0 +1,23 @@
+%h2 Spēles
+
+.item
+  %table.games
+    %tr
+      %th.col-id Id
+      %th.col-player Sportists #1
+      %th.col-player Sportists #2
+      %th.col-points Punkti
+      %th.col-tournament Turnīrs
+      %th.col-action
+      %th.col-action
+
+    - @games.each do |game|
+      %tr
+        %td.col-id= game.id
+        %td.col-player= User.find(game.player1_id).name
+        %td.col-player= User.find(game.player2_id).name
+        %td.col-points= "#{game.player1_points}/#{game.player2_points}"
+        %td.col-tournament= game.tournament.name
+        - if user_signed_in?
+          %td.col-action= link_to 'Mainīt', edit_tournament_game_path(game.tournament, game)
+          %td.col-action= link_to 'Dzēst', tournament_game_path(game.tournament, game), :confirm => 'Are you sure?', :method => :delete

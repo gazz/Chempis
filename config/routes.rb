@@ -1,17 +1,29 @@
 Gonka::Application.routes.draw do
+ 
+  devise_for :users
+  resources :users, :only => [:show]
+  put '/profile/edit', :to => "user#update"
+  get '/profile/edit', :to => "user#edit"
+  get '/profile', :to => "user#show"
+  resources :user, :only => [:destroy]
+
+  resources :tournaments do
+    resources :games
+    member do 
+      get :join
+    end
+  end
+
+  resources :laptimes
   
-  get "games/show"
+#  resources :users
 
-  match '/squash', :to => 'games#show'
-  match '/karts', :to => 'laptimes#show'
-
-  get "pages/index"
-
-  resource :games
-  resource :laptimes
+#  match '/squash', :to => 'games#index'
+#  match '/karts', :to => 'laptimes#index'
 
 
-  root :to => 'pages#index'
+  #root :to => 'pages#index'
+  root :to => 'tournaments#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

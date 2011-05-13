@@ -1,0 +1,39 @@
+- if user_signed_in?
+  %h1= current_user.name
+  %div.splitter
+  %ul
+    %li
+      %a{:href=>'#'} mani turnīri
+      %a{:href=>'#'} manas spēles
+  %div.splitter
+  %ul
+    %li
+      %a{:href=>profile_path} mans profils
+  
+  %div.splitter
+  %ul
+    %li
+      %a{:href=>destroy_user_session_path} izdzert indi
+  %div.splitter
+  %div#user_stats
+    %h4 Statistika
+    %div.label Spēles:
+    %div.value= total_games
+    %div.label Uzvaras:
+    %div.value= games_won
+    %div.label Zaudējumi:
+    %div.value= games_lost
+
+-else
+  %h1 Anonīmais
+  %div.splitter
+  %ul
+    %li
+      %a{:href=>new_user_session_path} ienākt
+  %div.splitter
+  %ul
+    %li
+      %a{:href=>new_user_registration_path} piereģistrēties
+    %li
+      %a{:href=>new_password_path(:user)} aizmirsi paroli?
+  

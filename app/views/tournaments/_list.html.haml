@@ -1,0 +1,22 @@
+%table
+  %tr
+    %th Id
+    %th Date
+    %th Name
+    %th Players
+    %th Available spots
+    %th
+    %th
+    %th
+
+  - @tournaments.each do |tournament|
+    %tr
+      %td= tournament.id
+      %td= tournament.datetime
+      %td= link_to tournament.name, tournament_path(tournament)
+      %td= tournament.users.map { |user| user.name }.join(', ')
+      %td #{tournament.users.count}/#{tournament.available_spots}
+      - if user_signed_in?
+        %td= link_to 'Join', join_tournament_path(tournament)
+        %td= link_to 'Edit', edit_tournament_path(tournament)
+        %td= link_to 'Destroy', tournament, :confirm => 'Are you sure?', :method => :delete

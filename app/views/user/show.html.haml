@@ -1,0 +1,54 @@
+#profile
+
+  %ul
+    %li
+      %h3 Pamatinfo
+      .info.middle
+        %div.label vārds:
+        %div.value= @user.name
+  
+        %div.label e-pasts:
+        %div.value= @user.email
+        
+        %div.actions
+          - if @user==current_user
+            %a{:href=>profile_edit_path} Pieskrūvēt
+  
+        .clear
+    %li
+      %h3 Spēļu statistika
+      .info
+        %table
+          %tr
+            %th Kopā
+            %th Uzvarētas
+            %th Zaudētas
+            %th Turnīri
+            %th Labākā vieta
+            %th Sliktākā vieta
+          %tr
+            %td 5
+            %td 3
+            %td 2
+            %td 1
+            %td 3
+            %td 3
+      
+    %li
+      %h3 Pretinieki
+      .info
+        %table
+          %tr
+            %th Vārds
+            %th Spēles
+            %th Uzvaras
+            %th Zaudējumi
+          
+          %tr
+            %td karro
+            %td 2
+            %td 1
+            %td 1
+          
+        
+          
