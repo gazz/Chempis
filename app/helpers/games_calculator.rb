@@ -40,4 +40,12 @@ module GamesCalculator
       :loses => self.calc_loses(games, user)}
   end
   
+  def self.game_winner(game)
+    if game.player1_points > game.player2_points
+      game.player1
+    else
+      game.player2
+    end
+  end
+  
 end

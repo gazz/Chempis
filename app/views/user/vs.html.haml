@@ -14,5 +14,5 @@
               %td= game.tournament.name
               %td= game.tournament.datetime
               %td #{game.player1_points}/#{game.player2_points}
-              %td= @user.name
+              %td= GamesCalculator::game_winner(game).name
       
