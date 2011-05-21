@@ -15,6 +15,9 @@ body a {
   text-decoration: none;
   color: #000000;
 }
+body li {
+  list-style: none;
+}
 body #splash_container {
   /* splash panel */
 
@@ -284,11 +287,14 @@ body #tournaments #contents #tournament_form .info li {
   list-style: none;
 }
 body #tournaments #contents #tournament_form .info li label {
-  width: 120px;
   display: block;
 }
 body #tournaments #contents #tournament_form .info li input {
   width: 100%;
+}
+body #tournaments #contents #tournament_form .info li p.inline-errors {
+  font-size: 0.8em;
+  color: red;
 }
 body #tournaments #contents #tournament {
   margin: 20px;
@@ -319,11 +325,14 @@ body #tournaments #contents #game_form .info li {
   list-style: none;
 }
 body #tournaments #contents #game_form .info li label {
-  width: 120px;
   display: block;
 }
 body #tournaments #contents #game_form .info li input {
   width: 100%;
+}
+body #tournaments #contents #game_form .info li p.inline-errors {
+  font-size: 0.8em;
+  color: red;
 }
 body #tournaments #contents table.games {
   width: 100%;
@@ -349,7 +358,7 @@ body #tournaments #contents .contents_bottom {
   height: 20px;
 }
 body #tournaments #contents table .col-action {
-  width: 60px;
+  white-space: nowrap;
 }
 body #tournaments #contents table .col-action a {
   font-size: 0.9em;
@@ -386,12 +395,12 @@ body #tournaments #filler {
   top: 10%;
   margin: auto;
 }
-body fieldset.buttons {
+body fieldset {
   margin: 0px;
   padding: 0px;
   border: 0 none;
 }
-body fieldset.buttons ol {
+body fieldset ol {
   padding: 0px;
   margin: 0px;
 }

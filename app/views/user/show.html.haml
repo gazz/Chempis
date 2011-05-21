@@ -28,12 +28,12 @@
             %th Labākā vieta
             %th Sliktākā vieta
           %tr
-            %td 5
-            %td 3
-            %td 2
-            %td 1
-            %td 3
-            %td 3
+            %td= @games.count
+            %td= GamesCalculator::calc_wins(@games, @user)
+            %td= GamesCalculator::calc_loses(@games, @user)
+            %td= @tournaments_total
+            %td= @tournament_best
+            %td= @tournament_worst
       
     %li
       %h3 Pretinieki
@@ -44,12 +44,15 @@
             %th Spēles
             %th Uzvaras
             %th Zaudējumi
+            %th
           
-          %tr
-            %td karro
-            %td 2
-            %td 1
-            %td 1
+          -@opponents.each do |opponent|
+            %tr
+              %td= link_to opponent.name, user_path(opponent)
+              %td= @opponent_res[opponent][:total]
+              %td= @opponent_res[opponent][:wins]
+              %td= @opponent_res[opponent][:loses]
+              %td.col-action= link_to 'Savstarpējās spēles', versus_user_path(@user, opponent)
           
         
           

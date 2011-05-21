@@ -1,0 +1,18 @@
+%table.content-table
+  %tr
+    %th Vārds
+    %th Turnīri
+    %th Spēles
+    %th Uzvaras
+    %th Zaudējumi
+
+  -@users.each do |user|
+    %tr
+      %td= link_to user[:name], user_path(user[:id])
+      %td= user[:tournament_count]
+      %td= user[:game_count]
+      %td= user[:games_won]
+      %td= user[:games_lost]
+      
+      
+      

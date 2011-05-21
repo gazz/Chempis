@@ -43,6 +43,10 @@ body {
     color: #000000;
   }
   
+  li {
+    list-style: none;
+  }
+  
   #splash_container {
     /* splash panel */
     #splash_panel {
@@ -378,14 +382,17 @@ body {
             list-style:none;
             
             label {
-              width: 120px;
               display: block;
             }
             
             input {
               width: 100%;
             }
-
+            
+            p.inline-errors {
+              font-size: 0.8em;
+              color: red;
+            }
             
           }
           
@@ -437,7 +444,7 @@ body {
       
       table {
         .col-action {
-          width: 60px;
+          white-space: nowrap;
           a {
             font-size: 0.9em;
             font-weight: bold;
@@ -483,7 +490,7 @@ body {
   }
   
             
-  fieldset.buttons {
+  fieldset {
     margin: 0px;
     padding: 0px;
     border: 0 none;
@@ -492,6 +499,7 @@ body {
       margin: 0px;
     }
   }
+  
 
   .clear {
     clear: both;

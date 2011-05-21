@@ -1,22 +1,28 @@
-%table
+%table.content-table.tournaments
   %tr
-    %th Id
-    %th Date
-    %th Name
-    %th Players
-    %th Available spots
-    %th
-    %th
-    %th
-
-  - @tournaments.each do |tournament|
+    %th.col-datetime Datums/Laiks
+    %th.col-name Turnīrs
+    %th.col-participants Spēlētāji
+    %th.col-availability Spēlētāju skaits
+    %th.col-location Kur
+    - if user_signed_in? and !locked
+      %th.col-action
+      %th.col-action
+      %th.col-action
+      %th.col-action
+    
+  -tournaments.each do |tournament|
     %tr
-      %td= tournament.id
-      %td= tournament.datetime
-      %td= link_to tournament.name, tournament_path(tournament)
-      %td= tournament.users.map { |user| user.name }.join(', ')
-      %td #{tournament.users.count}/#{tournament.available_spots}
-      - if user_signed_in?
-        %td= link_to 'Join', join_tournament_path(tournament)
-        %td= link_to 'Edit', edit_tournament_path(tournament)
-        %td= link_to 'Destroy', tournament, :confirm => 'Are you sure?', :method => :delete
+      %td.col-datetime= tournament.datetime.nil? ? '' : tournament.datetime.to_formatted_s(:datecontrol_timestamp)
+      %td.col-name= link_to tournament.name, tournament_path(tournament)
+      %td.col-participants
+        - tournament.users.each do |user| 
+          =link_to user.name, user_path(user) 
+          
+      %td.col-availability #{tournament.users.count}/#{tournament.available_spots}
+      %td.col-location= tournament.location
+      - if user_signed_in? and !locked
+        %td.col-action= link_to 'Piedalīties', join_tournament_path(tournament)
+        %td.col-action= link_to 'Dalībnieki', participants_tournament_path(tournament)
+        %td.col-action= link_to 'Mainīt', edit_tournament_path(tournament)
+        %td.col-action= link_to 'Dzēst', tournament, :confirm => 'toč toč?', :method => :delete

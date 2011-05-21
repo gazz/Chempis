@@ -1,16 +1,22 @@
 Gonka::Application.routes.draw do
  
   devise_for :users
-  resources :users, :only => [:show]
+  resources :users, :only => [:show] do
+    member do
+      get 'vs/:vs_id', :action => :vs, :as => 'versus'
+    end
+  end
   put '/profile/edit', :to => "user#update"
   get '/profile/edit', :to => "user#edit"
-  get '/profile', :to => "user#show"
+  get '/profile', :to => "users#show", :current => true 
   resources :user, :only => [:destroy]
 
   resources :tournaments do
     resources :games
     member do 
       get :join
+      get :participants
+      post :add_playaz
     end
   end
 

@@ -1,9 +1,9 @@
 = semantic_form_for @tournament do |form|
-  = form.input :name
-  = form.input :datetime, :as=>:string, :input_html => {:value => @tournament.datetime.nil? ? "" : @tournament.datetime.to_formatted_s(:datecontrol_timestamp) }
+  = form.input :name, :label => "Nosaukums"
+  = form.input :datetime, :as=>:string, :input_html => {:value => @tournament.datetime.nil? ? "" : @tournament.datetime.to_formatted_s(:datecontrol_timestamp) }, :label=>"Datums/Laiks"
   %script $('#tournament_datetime').datetimepicker();
-  = form.input :available_spots, :as => :select, :collection => 2..6
-  = form.input :location
+  = form.input :available_spots, :as => :select, :collection => 2..6, :label => "Sportistu skaits"
+  = form.input :location, :label => "Vieta"
   %div.actions
     = form.buttons do 
       =form.commit_button :label => "Saglabāt"

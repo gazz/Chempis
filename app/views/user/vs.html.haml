@@ -1,0 +1,18 @@
+#profile
+  %ul
+    %li
+      %h3 #{@user.name} pret #{@opponent.name}
+      .info
+        %table
+          %tr
+            %th Turnīrs
+            %th Datums
+            %th Rezultāts
+            %th Uzvar
+          -@games.each do |game|
+            %tr
+              %td= game.tournament.name
+              %td= game.tournament.datetime
+              %td #{game.player1_points}/#{game.player2_points}
+              %td= @user.name
+      

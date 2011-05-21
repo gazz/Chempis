@@ -1,0 +1,13 @@
+%ul
+  %li.dashboard_item
+    %div.title
+      %h2 Pievienot sportistus
+      
+    %div.dashboard-item-content
+      =semantic_form_for @tournament do |form|
+        
+        = form.input :users, :as => :check_boxes, :collection => @users, :label => false
+      
+        %div.actions
+          = form.buttons do 
+            =form.commit_button :label => "Saglabāt"        

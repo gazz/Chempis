@@ -30,7 +30,7 @@ class GamesController < ApplicationController
       flash[:success] = "Spēle saglabāta"
       redirect_to tournament_path(@game.tournament)
     else
-      render :back
+      redirect_to :back
     end  
   end
   
