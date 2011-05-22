@@ -3,7 +3,7 @@
     %li
       %h3 #{@user.name} pret #{@opponent.name}
       .info
-        %table
+        %table.games
           %tr
             %th Turnīrs
             %th Datums
@@ -11,8 +11,8 @@
             %th Uzvar
           -@games.each do |game|
             %tr
-              %td= game.tournament.name
-              %td= game.tournament.datetime
+              %td= link_to game.tournament.name, tournament_path(game.tournament)
+              %td= game.tournament.datetime.to_formatted_s(:datecontrol_timestamp)
               %td #{game.player1_points}/#{game.player2_points}
-              %td= GamesCalculator::game_winner(game).name
+              %td= link_to GamesCalculator::game_winner(game).name, user_path(GamesCalculator::game_winner(game))
       
