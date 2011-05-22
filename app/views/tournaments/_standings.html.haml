@@ -1,0 +1,12 @@
+%table.standings
+  %tr
+    %th Vieta
+    %th Sportists
+    %th Punkti
+  
+  -standings = GamesCalculator::calc_tournament_standings(tournament)
+  -standings.each do |user|
+    %tr
+      %td= standings.index(user) + 1
+      %td= link_to user.name, user_path(user)
+      %td= GamesCalculator::calc_wins(tournament.games, user)
