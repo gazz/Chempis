@@ -82,6 +82,9 @@ body #tournaments #top_line div#header div#header_title {
   float: left;
   padding-top: 30px;
 }
+body #tournaments #top_line div#header div#header_title a {
+  text-decoration: none;
+}
 body #tournaments #top_line div#header div#header_title h1 {
   padding: 15px 0 0 15px;
   font-size: 42px;
@@ -163,7 +166,6 @@ body #tournaments #contents #contents_left ul li.dashboard_item .actions a:hover
   background-color: #ccddff;
   color: #131313;
   border: 1px solid #131313;
-  margin: -1px;
 }
 body #tournaments #contents #contents_left ul li.dashboard_item .dashboard-item-content {
   clear: both;
@@ -263,7 +265,7 @@ body #tournaments #contents div.actions input:active {
   background-color: #ccddff;
   color: #131313;
   border: 1px solid #131313;
-  margin: -1px;
+  margin-top: -2px;
 }
 body #tournaments #contents div.actions input {
   font-size: 1em;
@@ -383,6 +385,15 @@ body #tournaments #contents table.games .col-points {
 body #tournaments #contents table.games .col-tournament {
   font-weight: bold;
   width: 150px;
+}
+body #tournaments #contents table.standings {
+  font-size: .9em;
+}
+body #tournaments #contents table.standings th {
+  width: 100px;
+}
+body #tournaments #contents table.standings td {
+  text-align: center;
 }
 body #tournaments #contents .contents_bottom {
   height: 20px;

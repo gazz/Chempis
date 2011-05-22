@@ -7,14 +7,25 @@
     %div.value= @tournament.name
     %div.label Datums/Laiks:
     %div.value= @tournament.datetime.nil? ? '' :@tournament.datetime.to_formatted_s(:datecontrol_timestamp)
-
+    %div.label Piedalās:
+    %div.value= @tournament.users.map { |u| u.name }.join ', '
+    
   =render 'games/list'
 
   .actions
     =link_to 'pievienot spēli', new_tournament_game_path(@tournament)
 
   .clear
+
+
   
+  %h2 Rezultāti
+  .item
+    =render '/tournaments/standings', :tournament => @tournament
+
+  .clear
+  %br
+
   =link_to 'atpakaļ', tournaments_path
 
 

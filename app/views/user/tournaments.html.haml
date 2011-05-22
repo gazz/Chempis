@@ -6,6 +6,7 @@
       %li
         %h3= link_to tournament.name + ' ' + tournament.datetime.to_formatted_s(:datecontrol_timestamp) + ' ' + tournament.location, tournament_path(tournament)
         .info
+          %h2 Spēles
           %table.games
             %tr
               %th Sportists #1
@@ -20,3 +21,5 @@
                 %td #{game.player1_points}/#{game.player2_points}
                 %td= GamesCalculator::game_winner(game).name
           
+          %h2 Rezultāti
+          =render '/tournaments/standings', :tournament => tournament

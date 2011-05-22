@@ -124,6 +124,10 @@ body {
           float: left;
           padding-top: 30px;
           
+          a {
+            text-decoration: none;
+          }
+          
           h1 {
             padding: 15px 0 0 15px;
             font-size: 42px;
@@ -210,7 +214,6 @@ body {
                   background-color: @bright_color;
                   color: @dark_color;
                   border: 1px solid @dark_color;
-                  margin: -1px;
                 }
                 
                 .rounded-corners(10px);
@@ -341,8 +344,7 @@ body {
             background-color: @bright_color;
             color: @dark_color;
             border: 1px solid @dark_color;
-            margin: -1px;
-            
+            margin-top: -2px;
           }
 
           .rounded-corners(10px);
@@ -465,6 +467,16 @@ body {
           width: 150px;
         }
 
+      }
+      
+      table.standings {
+        font-size: .9em;
+        th {
+          width: 100px;
+        }
+        td {
+          text-align: center;
+        }
       }
 
       .contents_bottom {
