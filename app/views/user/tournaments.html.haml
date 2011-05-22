@@ -1,6 +1,6 @@
 #profile
   %br
-  %h1 Turnīri
+  %h1= @user.name + ' turnīri'
   %ul
     -@tournaments.each do |tournament|
       %li
