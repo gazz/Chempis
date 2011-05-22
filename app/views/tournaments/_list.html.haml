@@ -21,8 +21,9 @@
           
       %td.col-availability #{tournament.users.count}/#{tournament.available_spots}
       %td.col-location= tournament.location
-      - if user_signed_in? and !locked
-        %td.col-action= link_to 'Piedalīties', join_tournament_path(tournament)
-        %td.col-action= link_to 'Dalībnieki', participants_tournament_path(tournament)
-        %td.col-action= link_to 'Mainīt', edit_tournament_path(tournament)
-        %td.col-action= link_to 'Dzēst', tournament, :confirm => 'toč toč?', :method => :delete
+      - if user_signed_in? and (!locked or can?(:manage, tournament))
+        %td.col-action
+          = link_to 'Piedalīties', join_tournament_path(tournament) unless can?(:manage, tournament)
+          = link_to 'Dalībnieki', participants_tournament_path(tournament) if can?(:manage, tournament)
+          = link_to 'Mainīt', edit_tournament_path(tournament) if can?(:manage, tournament)
+          = link_to 'Dzēst', tournament, :confirm => 'toč toč?', :method => :delete if can?(:manage, tournament)

@@ -22,6 +22,7 @@ class TournamentsController < ApplicationController
   
   def new
     @tournament = Tournament.new
+    @tournament.owner = current_user
   end
   
   def edit

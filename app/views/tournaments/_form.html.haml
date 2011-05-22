@@ -4,6 +4,7 @@
   %script $('#tournament_datetime').datetimepicker();
   = form.input :available_spots, :as => :select, :collection => 2..6, :label => "Sportistu skaits"
   = form.input :location, :label => "Vieta"
+  = form.input :owner, :label => "Turnīra Boss", :as => :select, :collection => User.all
   %div.actions
     = form.buttons do 
       =form.commit_button :label => "Saglabāt"

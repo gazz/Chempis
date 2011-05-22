@@ -19,5 +19,6 @@
         %td.col-points= "#{game.player1_points}/#{game.player2_points}"
         %td.col-tournament= game.tournament.name
         - if user_signed_in?
-          %td.col-action= link_to 'Mainīt', edit_tournament_game_path(game.tournament, game)
-          %td.col-action= link_to 'Dzēst', tournament_game_path(game.tournament, game), :confirm => 'Are you sure?', :method => :delete
+          %td.col-action
+            = link_to 'Mainīt', edit_tournament_game_path(game.tournament, game)
+            = link_to 'Dzēst', tournament_game_path(game.tournament, game), :confirm => 'Are you sure?', :method => :delete
