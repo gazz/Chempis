@@ -5,7 +5,7 @@ body {
   /*font-family: helvetica;*/
 
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
-  background-color: #b5b5b5;
+  background-color: #d5d5d5;
 }
 body h1 {
   padding: 0;
@@ -58,13 +58,13 @@ body #splash_container #splash_panel #balls-of-steel {
 }
 body #tournaments #top_line {
   height: 110px;
-  background-color: #b5b5b5;
+  background-color: #d5d5d5;
   text-shadow: 2px 1px #131313;
 }
 body #tournaments #top_line div#header {
   width: 1000px;
   height: 110px;
-  background-color: #b5b5b5;
+  background-color: #d5d5d5;
   margin: auto;
   color: #ccddff;
 }
@@ -444,7 +444,7 @@ body #tournaments #filler {
   margin: auto;
 }
 body #tournaments #filler_top {
-  background-color: #b5b5b5;
+  background-color: #d5d5d5;
   z-index: -1;
   top: 100px;
   height: 30px;
