@@ -91,12 +91,16 @@ body {
   }
   
   background-color: @base_color;
+
+  background: url("/images/tournaments-bg.jpg");
+  background-repeat:no-repeat;
+  background-attachment:fixed;
   
   #tournaments {
+
     
     #top_line {
       height: @header_height;
-      background-color: @base_color;
       text-shadow: 2px 1px @dark_color;
       
       div#header {
@@ -108,7 +112,6 @@ body {
         
         width: @content_width;
         height: @header_height;
-        background-color: @base_color;
         margin: auto;
         color: @bright_color;
         
@@ -529,22 +532,13 @@ body {
     #filler {
       background-color: @dark_color;
       z-index: -1;
-      height: 90%;
+      height: 50%;
       position: absolute;
       width: @content_width;
       left: 0px;
       right: 0px;
-      top: 10%;
+      top: 50%;
       margin: auto;
-    }
-    
-    #filler_top {
-      background-color: @base_color;
-      z-index: -1;
-      top: 100px;
-      height: 30px;
-      width: 100%;
-      position: absolute;
     }
     
   }
