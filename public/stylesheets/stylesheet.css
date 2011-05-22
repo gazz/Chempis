@@ -400,6 +400,7 @@ body #tournaments #contents .contents_bottom {
 }
 body #tournaments #contents table .col-action {
   white-space: nowrap;
+  width: 100px;
 }
 body #tournaments #contents table .col-action a {
   font-size: 0.9em;

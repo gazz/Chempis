@@ -8,8 +8,8 @@
       %th.col-player Sportists #2
       %th.col-points Punkti
       %th.col-tournament Turnīrs
-      %th.col-action
-      %th.col-action
+      - if user_signed_in? and (!(@games.nil?) or can?(:modify, @games.first.tournament))
+        %th.col-action
 
     - @games.each do |game|
       %tr
