@@ -54,5 +54,13 @@
               %td= @opponent_res[opponent][:loses]
               %td.col-action= link_to 'Savstarpējās spēles', versus_user_path(@user, opponent)
           
-        
-          
+    %li
+      %h3 Papildus
+      .info
+        %table
+          %tr
+            %td.col-action
+              =link_to @user.name + ' Turnīri', tournaments_user_path(@user)
+
+
+      

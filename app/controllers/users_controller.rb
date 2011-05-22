@@ -50,4 +50,34 @@ class UsersController < ApplicationController
     redirect_to :back
   end
   
+  def tournaments
+    if params[:current]
+      @user = current_user
+    else
+      @user = User.find(params[:id])
+    end
+    
+    @tournaments = @user.tournaments
+    
+    render '/user/tournaments'
+  rescue ActiveRecord::RecordNotFound
+    redirect_to :back
+  end
+  
+  def games
+    
+    if params[:current]
+      @user = current_user
+    else
+      @user = User.find(params[:id])
+    end
+    
+    @games = Game.find_by_player(@user.id)
+    
+    render '/user/games'
+  rescue ActiveRecord::RecordNotFound
+    redirect_to :back
+  end
+  
+  
 end

@@ -4,11 +4,13 @@ Gonka::Application.routes.draw do
   resources :users, :only => [:show] do
     member do
       get 'vs/:vs_id', :action => :vs, :as => 'versus'
+      get :tournaments
     end
   end
   put '/profile/edit', :to => "user#update"
   get '/profile/edit', :to => "user#edit"
   get '/profile', :to => "users#show", :current => true 
+  get '/profile/tournaments', :to => "users#tournaments", :current => true 
   resources :user, :only => [:destroy]
 
   resources :tournaments do

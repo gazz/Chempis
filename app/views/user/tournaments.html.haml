@@ -1,0 +1,22 @@
+#profile
+  %br
+  %h1 Turnīri
+  %ul
+    -@tournaments.each do |tournament|
+      %li
+        %h3= link_to tournament.name + ', ' + tournament.datetime.to_formatted_s(:datecontrol_timestamp) + ', ' + tournament.location, tournament_path(tournament)
+        .info
+          %table.games
+            %tr
+              %th Sportists #1
+              %th Sportists #2
+              %th Rezultāts
+              %th Uzvar
+          
+            -tournament.games.find_by_player(@user).each do |game|
+              %tr
+                %td= game.player1.name
+                %td= game.player2.name
+                %td #{game.player1_points}/#{game.player2_points}
+                %td= GamesCalculator::game_winner(game).name
+          
