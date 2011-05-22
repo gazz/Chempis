@@ -9,7 +9,7 @@
 @highlight_color: #dfe0bf;
 
 @content_width: 1000px;
-@header_height: 60px;
+@header_height: 110px;
 @right_content_width: 180px;
 @content_paddings: 50px;
 
@@ -100,7 +100,7 @@ body {
         a {
           color: @bright_color;
         }
-        
+
         
         width: @content_width;
         height: @header_height;
@@ -108,8 +108,18 @@ body {
         margin: auto;
         color: @bright_color;
         
+        .logo {
+          float: left;
+          height: 104px;
+          width: 140px;
+          background-image: url('/images/kd2_logo.png');
+          background-repeat: no-repeat,
+        }
+        
         div#header_title {
           float: left;
+          padding-top: 50px;
+          
           h1 {
             padding: 15px 0 0 15px;
             font-size: 32px;
