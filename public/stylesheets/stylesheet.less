@@ -1,12 +1,13 @@
 
 /* theme colors */
-@dark_color: #2E3D2C;
-@base_color: #57693C;
-@light_color: #999855;
-@bright_color: #D8DB86;
+@dark_color: #131313;
+@base_color: #B5B5B5;
+@light_color: #0000FF;
+@bright_color: #CCDDFF;
 @neutral_color: #78706E;
-@neutral_color: #ffffff;
-@highlight_color: #dfe0bf;
+@neutral_color: #E5E5E5;
+@highlight_color: #F4F4F4;
+@title_color: #4499FF;
 
 @content_width: 1000px;
 @header_height: 110px;
@@ -98,7 +99,7 @@ body {
       div#header {
         
         a {
-          color: @bright_color;
+          color: @title_color;
         }
 
         
@@ -118,11 +119,11 @@ body {
         
         div#header_title {
           float: left;
-          padding-top: 50px;
+          padding-top: 30px;
           
           h1 {
             padding: 15px 0 0 15px;
-            font-size: 32px;
+            font-size: 42px;
           }
         }
         
@@ -450,7 +451,8 @@ body {
       .contents_bottom {
         height: 20px;
       }
-      .rounded-corners(10px)
+      
+      .rounded-corners(10px);
       
       table {
         .col-action {
@@ -471,10 +473,10 @@ body {
     #footer {
       width: @content_width;
       margin: auto;
-      background-color: @dark_color;
       color: @bright_color;
       height: 100px;
       text-shadow: 1px 1px black;
+      background-color: @dark_color;
       
       div#copyright {
         text-align: center;

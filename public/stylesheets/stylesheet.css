@@ -1,11 +1,11 @@
 /* theme colors */
 body {
   margin: 0px;
-  background: #ffffff;
+  background: #e5e5e5;
   /*font-family: helvetica;*/
 
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
-  background-color: #57693c;
+  background-color: #b5b5b5;
 }
 body h1 {
   padding: 0;
@@ -35,7 +35,7 @@ body #splash_container #splash_panel h1 {
   margin: 240px 0 0;
   font-size: 20px;
   font-weight: bold;
-  color: #d8db86;
+  color: #ccddff;
 }
 body #splash_container #splash_panel #squash-tiems {
   float: left;
@@ -55,18 +55,18 @@ body #splash_container #splash_panel #balls-of-steel {
 }
 body #tournaments #top_line {
   height: 110px;
-  background-color: #57693c;
-  text-shadow: 2px 1px #2e3d2c;
+  background-color: #b5b5b5;
+  text-shadow: 2px 1px #131313;
 }
 body #tournaments #top_line div#header {
   width: 1000px;
   height: 110px;
-  background-color: #57693c;
+  background-color: #b5b5b5;
   margin: auto;
-  color: #d8db86;
+  color: #ccddff;
 }
 body #tournaments #top_line div#header a {
-  color: #d8db86;
+  color: #4499ff;
 }
 body #tournaments #top_line div#header .logo {
   float: left;
@@ -77,11 +77,11 @@ body #tournaments #top_line div#header .logo {
 }
 body #tournaments #top_line div#header div#header_title {
   float: left;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 body #tournaments #top_line div#header div#header_title h1 {
   padding: 15px 0 0 15px;
-  font-size: 32px;
+  font-size: 42px;
 }
 body #tournaments #top_line div#header div#header_links {
   float: right;
@@ -89,21 +89,24 @@ body #tournaments #top_line div#header div#header_links {
 }
 body #tournaments #top_line div#header div#header_links a {
   font-size: 20px;
-  color: #d8db86;
+  color: #ccddff;
   font-weight: bold;
 }
 body #tournaments #contents {
   width: 1000px;
   margin: auto;
-  background-color: #d8db86;
+  background-color: #ccddff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
 }
 body #tournaments #contents a {
-  color: #2e3d2c;
+  color: #131313;
 }
 body #tournaments #contents .flash {
   float: left;
   width: 740px;
-  background-color: #dfe0bf;
+  background-color: #f4f4f4;
   margin: 15px;
   padding: 10px;
   border-radius: 10px;
@@ -124,7 +127,7 @@ body #tournaments #contents .value {
 body #tournaments #contents #contents_left {
   float: left;
   width: 770px;
-  color: #2e3d2c;
+  color: #131313;
 }
 body #tournaments #contents #contents_left ul {
   margin: 0px;
@@ -145,8 +148,8 @@ body #tournaments #contents #contents_left ul li.dashboard_item .actions {
 body #tournaments #contents #contents_left ul li.dashboard_item .actions a {
   font-size: 13px;
   font-weight: bold;
-  color: #dfe0bf;
-  background-color: #2e3d2c;
+  color: #f4f4f4;
+  background-color: #131313;
   padding: 3px 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -154,7 +157,7 @@ body #tournaments #contents #contents_left ul li.dashboard_item .actions a {
 }
 body #tournaments #contents #contents_left ul li.dashboard_item .dashboard-item-content {
   clear: both;
-  background-color: #dfe0bf;
+  background-color: #f4f4f4;
   padding: 10px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -204,7 +207,7 @@ body #tournaments #contents #contents_left #profile h2 {
   margin: 5px;
 }
 body #tournaments #contents #contents_left #profile .info {
-  background-color: #dfe0bf;
+  background-color: #f4f4f4;
   padding: 15px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -234,10 +237,10 @@ body #tournaments #contents div.actions {
   float: right;
 }
 body #tournaments #contents div.actions a, body #tournaments #contents div.actions input {
-  background-color: #2e3d2c;
+  background-color: #131313;
   margin: 10px;
   padding: 5px 15px;
-  color: #dfe0bf;
+  color: #f4f4f4;
   border: 0;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -254,15 +257,15 @@ body #tournaments #contents #contents_right {
   width: 180px;
   padding: 10px 10px 30px;
   margin: 30px 10px 0  0;
-  color: #2e3d2c;
-  text-shadow: 1px 1px #ffffff;
-  background-color: #dfe0bf;
+  color: #131313;
+  text-shadow: 1px 1px #e5e5e5;
+  background-color: #f4f4f4;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
 }
 body #tournaments #contents #contents_right a {
-  color: #2e3d2c;
+  color: #131313;
 }
 body #tournaments #contents #contents_right h1 {
   text-align: right;
@@ -276,7 +279,7 @@ body #tournaments #contents #contents_right h4 {
   margin: 5px;
 }
 body #tournaments #contents #contents_right .splitter {
-  border-bottom: 1px solid #2e3d2c;
+  border-bottom: 1px solid #131313;
   margin: 10px 0;
 }
 body #tournaments #contents #tournament_form {
@@ -285,7 +288,7 @@ body #tournaments #contents #tournament_form {
   margin: auto;
 }
 body #tournaments #contents #tournament_form .info {
-  background-color: #dfe0bf;
+  background-color: #f4f4f4;
   padding: 15px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -312,7 +315,7 @@ body #tournaments #contents #tournament h2 {
 }
 body #tournaments #contents #tournament .item {
   padding: 10px;
-  background-color: #dfe0bf;
+  background-color: #f4f4f4;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -323,7 +326,7 @@ body #tournaments #contents #game_form {
   margin: auto;
 }
 body #tournaments #contents #game_form .info {
-  background-color: #dfe0bf;
+  background-color: #f4f4f4;
   padding: 15px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -371,8 +374,8 @@ body #tournaments #contents table .col-action {
 body #tournaments #contents table .col-action a {
   font-size: 0.9em;
   font-weight: bold;
-  background-color: #2e3d2c;
-  color: #dfe0bf;
+  background-color: #131313;
+  color: #f4f4f4;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -381,10 +384,10 @@ body #tournaments #contents table .col-action a {
 body #tournaments #footer {
   width: 1000px;
   margin: auto;
-  background-color: #2e3d2c;
-  color: #d8db86;
+  color: #ccddff;
   height: 100px;
   text-shadow: 1px 1px black;
+  background-color: #131313;
 }
 body #tournaments #footer div#copyright {
   text-align: center;
@@ -393,7 +396,7 @@ body #tournaments #footer div#copyright {
   padding: 20px;
 }
 body #tournaments #filler {
-  background-color: #2e3d2c;
+  background-color: #131313;
   z-index: -1;
   height: 90%;
   position: absolute;
