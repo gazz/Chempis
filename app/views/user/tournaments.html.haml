@@ -6,7 +6,7 @@
       %li
         %h3= link_to tournament.name + ' ' + tournament.datetime.to_formatted_s(:datecontrol_timestamp) + ' ' + tournament.location, tournament_path(tournament)
         .info
-          %h2 Spēles
+          %h2= @user.name + ' spēles'
           %table.games
             %tr
               %th Sportists #1

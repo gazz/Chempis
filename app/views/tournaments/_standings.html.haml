@@ -3,6 +3,7 @@
     %th Vieta
     %th Sportists
     %th Punkti
+    %th Spēles
   
   -standings = GamesCalculator::calc_tournament_standings(tournament)
   -standings.each do |user|
@@ -10,3 +11,4 @@
       %td= standings.index(user) + 1
       %td= link_to user.name, user_path(user)
       %td= GamesCalculator::calc_wins(tournament.games, user)
+      %td= tournament.games.find_by_player(user.id).count
