@@ -4,7 +4,7 @@
   %ul
     -@tournaments.each do |tournament|
       %li
-        %h3= link_to tournament.name + ', ' + tournament.datetime.to_formatted_s(:datecontrol_timestamp) + ', ' + tournament.location, tournament_path(tournament)
+        %h3= link_to tournament.name + ' ' + tournament.datetime.to_formatted_s(:datecontrol_timestamp) + ' ' + tournament.location, tournament_path(tournament)
         .info
           %table.games
             %tr

@@ -42,6 +42,9 @@ body {
   a {
     text-decoration: none;
     color: #000000;
+    &:hover, &:active {
+      text-decoration: underline;
+    }
   }
   
   li {
@@ -195,12 +198,20 @@ body {
             .actions {
               padding: 20px 5px 0;
               float: right;
+              white-space: nowrap;
               a {
                 font-size: 13px;
                 font-weight: bold;
                 color: @highlight_color;
                 background-color: @dark_color;
                 padding: 3px 20px;
+                
+                &:hover, &:active {
+                  background-color: @bright_color;
+                  color: @dark_color;
+                  border: 1px solid @dark_color;
+                  margin: -1px;
+                }
                 
                 .rounded-corners(10px);
               }
@@ -325,6 +336,14 @@ body {
           padding: 5px 15px;
           color: @highlight_color;
           border: 0;
+
+          &:hover, &:active {
+            background-color: @bright_color;
+            color: @dark_color;
+            border: 1px solid @dark_color;
+            margin: -1px;
+            
+          }
 
           .rounded-corners(10px);
         }
@@ -464,6 +483,13 @@ body {
             color: @highlight_color;
             .rounded-corners(10px);
             padding: 2px 15px;
+            
+            &:hover, &:active {
+              background-color: @bright_color;
+              color: @dark_color;
+              border: 1px solid @dark_color;
+              margin: -1px;
+            }
           }
         }
       }
@@ -497,6 +523,15 @@ body {
       right: 0px;
       top: 10%;
       margin: auto;
+    }
+    
+    #filler_top {
+      background-color: @base_color;
+      z-index: -1;
+      top: 100px;
+      height: 30px;
+      width: 100%;
+      position: absolute;
     }
     
   }

@@ -15,6 +15,9 @@ body a {
   text-decoration: none;
   color: #000000;
 }
+body a:hover, body a:active {
+  text-decoration: underline;
+}
 body li {
   list-style: none;
 }
@@ -144,6 +147,7 @@ body #tournaments #contents #contents_left ul li.dashboard_item .title h2 {
 body #tournaments #contents #contents_left ul li.dashboard_item .actions {
   padding: 20px 5px 0;
   float: right;
+  white-space: nowrap;
 }
 body #tournaments #contents #contents_left ul li.dashboard_item .actions a {
   font-size: 13px;
@@ -154,6 +158,12 @@ body #tournaments #contents #contents_left ul li.dashboard_item .actions a {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
+}
+body #tournaments #contents #contents_left ul li.dashboard_item .actions a:hover, body #tournaments #contents #contents_left ul li.dashboard_item .actions a:active {
+  background-color: #ccddff;
+  color: #131313;
+  border: 1px solid #131313;
+  margin: -1px;
 }
 body #tournaments #contents #contents_left ul li.dashboard_item .dashboard-item-content {
   clear: both;
@@ -245,6 +255,15 @@ body #tournaments #contents div.actions a, body #tournaments #contents div.actio
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
+}
+body #tournaments #contents div.actions a:hover,
+body #tournaments #contents div.actions input:hover,
+body #tournaments #contents div.actions a:active,
+body #tournaments #contents div.actions input:active {
+  background-color: #ccddff;
+  color: #131313;
+  border: 1px solid #131313;
+  margin: -1px;
 }
 body #tournaments #contents div.actions input {
   font-size: 1em;
@@ -381,6 +400,12 @@ body #tournaments #contents table .col-action a {
   -moz-border-radius: 10px;
   padding: 2px 15px;
 }
+body #tournaments #contents table .col-action a:hover, body #tournaments #contents table .col-action a:active {
+  background-color: #ccddff;
+  color: #131313;
+  border: 1px solid #131313;
+  margin: -1px;
+}
 body #tournaments #footer {
   width: 1000px;
   margin: auto;
@@ -405,6 +430,14 @@ body #tournaments #filler {
   right: 0px;
   top: 10%;
   margin: auto;
+}
+body #tournaments #filler_top {
+  background-color: #b5b5b5;
+  z-index: -1;
+  top: 100px;
+  height: 30px;
+  width: 100%;
+  position: absolute;
 }
 body fieldset {
   margin: 0px;
