@@ -10,11 +10,11 @@ class Tournament < ActiveRecord::Base
     :message => "sapildam ka nu visus laukus"
   
   def self.upcoming
-    where('datetime > ?', DateTime.now)
+    where('datetime > ?', DateTime.now).order('datetime desc')
   end
   
   def self.previous
-    where('datetime < ?', DateTime.now)
+    where('datetime < ?', DateTime.now).order('datetime desc')
   end
   
 end

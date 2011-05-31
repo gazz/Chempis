@@ -57,7 +57,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
     
-    @tournaments = @user.tournaments
+    @tournaments = @user.tournaments.order('datetime desc')
     
     render '/user/tournaments'
   rescue ActiveRecord::RecordNotFound
